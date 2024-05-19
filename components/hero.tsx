@@ -11,7 +11,7 @@ export default function Hero() {
       </Badge>
 
       <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl text-center text-balance leading-tight lg:leading-[1.1]">
-        Front-end developer driven by learning and challenges.
+        Software engineer driven by learning and challenges.
       </h1>
       <p className="text-lg font-light max-w-xl text-center text-foreground">
         I aim to create websites that are clean, well-organized, and provide an

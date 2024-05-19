@@ -12,7 +12,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Joeri Breedveld",
-  description: "Front-end developer driven by learning and challenges.",
+  description: "Software engineer driven by learning and challenges.",
 };
 
 export default function Layout({ children }: TLayout) {
