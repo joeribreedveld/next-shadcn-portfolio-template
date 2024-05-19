@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "@/app/globals.css";
 import Header from "@/components/header";
+import Footer from "@/components/footer";
 
 type TLayout = Readonly<{
   children: React.ReactNode;
@@ -20,6 +21,7 @@ export default function Layout({ children }: TLayout) {
       <body className={inter.className}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
