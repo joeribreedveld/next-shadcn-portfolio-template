@@ -14,7 +14,7 @@ import { MenuIcon } from "lucide-react";
 
 export default function Header() {
   return (
-    <header className="flex items-center py-4 container">
+    <header className="flex items-center py-4 px-4 md:container">
       <Sheet>
         <SheetTrigger asChild className="w-ful">
           <div className="w-full md:hidden">
@@ -53,11 +53,6 @@ export default function Header() {
       </div>
       <NavigationMenu className="w-full items-center justify-center hidden md:flex">
         <NavigationMenuList>
-          <NavigationMenuItem>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Home
-            </NavigationMenuLink>
-          </NavigationMenuItem>
           <NavigationMenuItem>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Projects
