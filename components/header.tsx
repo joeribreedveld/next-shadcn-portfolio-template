@@ -58,7 +58,7 @@ export default function Header() {
         </NavigationMenuList>
       </NavigationMenu>
       <div className="w-full justify-end items-center hidden md:flex">
-        <Link href="/">
+        <Link href="/#footer">
           <Button>Contact</Button>
         </Link>
       </div>

@@ -9,6 +9,7 @@ import Image from "next/image";
 import { Button } from "./ui/button";
 import { Github, Link as LinkIcon } from "lucide-react";
 import Link from "next/link";
+import { Badge } from "./ui/badge";
 
 const projects = [
   {
@@ -19,6 +20,7 @@ const projects = [
       "https://source.unsplash.com/a-mother-unpacking-local-food-in-zero-waste-packaging-from-bag-with-help-of-daughter-in-kitchen-at-home-mG9ACs8XFTE",
     website: "https://appie.joeribreedveld.com/",
     github: "https://github.com/joeribreedveld/appie-family2",
+    visibility: "private",
   },
   {
     title: "Martial Arts Amsterdam",
@@ -28,6 +30,7 @@ const projects = [
       "https://source.unsplash.com/boy-doing-karate-routines-during-golden-hour-igLzPKOvZNw",
     website: "https://martialartsamsterdam.com/",
     github: "https://github.com/joeribreedveld/martial-arts-amsterdam",
+    visibility: "private",
   },
   {
     title: "Hair Calendar",
@@ -37,6 +40,7 @@ const projects = [
       "https://source.unsplash.com/a-woman-getting-her-hair-cut-by-a-hair-stylist-Md_DhaFsnCQ",
     website: "https://haircalendar.vercel.app",
     github: "https://github.com/joeribreedveld/hair-calendar",
+    visibility: "public",
   },
 ];
 
@@ -48,6 +52,11 @@ export default function Projects() {
           <CardHeader>
             <CardTitle className="text-xl">{project.title}</CardTitle>
             <CardDescription>{project.description}</CardDescription>
+            <div>
+              <Badge variant="secondary" className="w-fit capitalize mt-2">
+                {project.visibility}
+              </Badge>
+            </div>
           </CardHeader>
           <CardContent>
             <Image
@@ -64,7 +73,11 @@ export default function Projects() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Button variant="outline" className="mt-6">
+                  <Button
+                    disabled={project.visibility === "private"}
+                    variant="outline"
+                    className="mt-6"
+                  >
                     <LinkIcon className="h-4 w-4 mr-2" />
                     Website
                   </Button>
@@ -76,7 +89,11 @@ export default function Projects() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Button variant="outline" className="mt-6">
+                  <Button
+                    variant="outline"
+                    className="mt-6"
+                    disabled={project.visibility === "private"}
+                  >
                     <Github className="h-4 w-4 mr-2" />
                     GitHub
                   </Button>

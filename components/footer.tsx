@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="px-4 md:container py-12">
+    <footer className="px-4 md:container py-12" id="footer">
       <ul className="flex flex-wrap gap-4 justify-center">
         <li>
           <Link

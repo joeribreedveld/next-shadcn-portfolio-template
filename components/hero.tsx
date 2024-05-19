@@ -19,7 +19,7 @@ export default function Hero() {
       </p>
       <div className="flex gap-4 py-4 md:pb-10 items-center">
         <Link href="/">
-          <Button>Learn more</Button>
+          <Button disabled>Learn more</Button>
         </Link>
         <Link
           href="https://github.com/joeribreedveld"
