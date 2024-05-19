@@ -8,8 +8,8 @@ export default function Hero() {
         Front-end developer driven by learning and challenges.
       </h1>
       <p className="text-lg font-light max-w-xl text-center text-foreground">
-        A modal dialog that interrupts the user with important content and
-        expects a response.
+        I aim to create websites that are clean, well-organized, and provide an
+        excellent user experience.
       </p>
       <div className="flex gap-4 py-4 md:pb-10 items-center">
         <Button>Learn more</Button>

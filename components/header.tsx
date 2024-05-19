@@ -26,7 +26,7 @@ export default function Header() {
 
         <SheetContent side="left">
           <Link className="flex items-center gap-2" href="#">
-            <h3 className="text-xl font-semibold tracking-tight">
+            <h3 className="text-lg font-semibold tracking-tight">
               Joeri Breedveld
             </h3>
           </Link>
@@ -47,7 +47,7 @@ export default function Header() {
         </SheetContent>
       </Sheet>
       <div className="w-full md:flex hidden justify-start items-center">
-        <h3 className="text-xl font-semibold tracking-tight">
+        <h3 className="text-lg font-semibold tracking-tight">
           Joeri Breedveld
         </h3>
       </div>
