@@ -11,36 +11,56 @@ import {
 import Link from "next/link";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { MenuIcon } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 export default function Header() {
   return (
     <header className="flex items-center py-4 px-4 md:container">
       <div className="w-full justify-start items-center">
-        <h3 className="text-xl md:text-lg font-semibold tracking-tight">
-          Joeri Breedveld
-        </h3>
+        <Link href="/">
+          <h3 className="text-xl md:text-lg font-semibold tracking-tight">
+            Joeri Breedveld
+          </h3>
+        </Link>
       </div>
       <NavigationMenu className="w-full items-center justify-center hidden md:flex">
         <NavigationMenuList>
           <NavigationMenuItem>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Projects
+            <NavigationMenuLink
+              asChild
+              className={navigationMenuTriggerStyle()}
+            >
+              <Link href="/">Projects</Link>
             </NavigationMenuLink>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              About
+            <NavigationMenuLink
+              asChild
+              className={cn(
+                navigationMenuTriggerStyle(),
+                "text-muted-foreground hover:text-muted-foreground",
+              )}
+            >
+              <Link href="/">About</Link>
             </NavigationMenuLink>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Experience
+            <NavigationMenuLink
+              asChild
+              className={cn(
+                navigationMenuTriggerStyle(),
+                "text-muted-foreground hover:text-muted-foreground",
+              )}
+            >
+              <Link href="/">Experience</Link>
             </NavigationMenuLink>
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
       <div className="w-full justify-end items-center hidden md:flex">
-        <Button>Contact</Button>
+        <Link href="/">
+          <Button>Contact</Button>
+        </Link>
       </div>
       <Sheet>
         <SheetTrigger asChild className="w-full flex justify-end items-center">

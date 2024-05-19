@@ -7,7 +7,8 @@ import {
 } from "@/components/ui/card";
 import Image from "next/image";
 import { Button } from "./ui/button";
-import { Github, Link } from "lucide-react";
+import { Github, Link as LinkIcon } from "lucide-react";
+import Link from "next/link";
 
 const projects = [
   {
@@ -16,6 +17,8 @@ const projects = [
       "Shared grocery list app for households. Let your family add items to the list and see them in real-time.",
     image:
       "https://source.unsplash.com/a-mother-unpacking-local-food-in-zero-waste-packaging-from-bag-with-help-of-daughter-in-kitchen-at-home-mG9ACs8XFTE",
+    website: "https://appie.joeribreedveld.com/",
+    github: "https://github.com/joeribreedveld/appie-family2",
   },
   {
     title: "Martial Arts Amsterdam",
@@ -23,6 +26,8 @@ const projects = [
       "An online platform for discovering and promoting martial arts dojos and workshops in Amsterdam.",
     image:
       "https://source.unsplash.com/boy-doing-karate-routines-during-golden-hour-igLzPKOvZNw",
+    website: "https://martialartsamsterdam.com/",
+    github: "https://github.com/joeribreedveld/martial-arts-amsterdam",
   },
   {
     title: "Hair Calendar",
@@ -30,6 +35,8 @@ const projects = [
       "Track your hair wash days and adjust your hair routine based on a personalized calendar.",
     image:
       "https://source.unsplash.com/a-woman-getting-her-hair-cut-by-a-hair-stylist-Md_DhaFsnCQ",
+    website: "https://haircalendar.vercel.app",
+    github: "https://github.com/joeribreedveld/hair-calendar",
   },
 ];
 
@@ -52,16 +59,28 @@ export default function Projects() {
             />
             <ul className="flex gap-4">
               <li>
-                <Button variant="outline" className="mt-6">
-                  <Github className="h-4 w-4 mr-2" />
-                  GitHub
-                </Button>
+                <Link
+                  href={project.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button variant="outline" className="mt-6">
+                    <LinkIcon className="h-4 w-4 mr-2" />
+                    Website
+                  </Button>
+                </Link>
               </li>
               <li>
-                <Button variant="outline" className="mt-6">
-                  <Link className="h-4 w-4 mr-2" />
-                  Website
-                </Button>
+                <Link
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button variant="outline" className="mt-6">
+                    <Github className="h-4 w-4 mr-2" />
+                    GitHub
+                  </Button>
+                </Link>
               </li>
             </ul>
           </CardContent>
