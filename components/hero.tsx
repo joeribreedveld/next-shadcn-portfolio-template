@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="mx-auto flex flex-col items-center gap-2 md:pb-8 py-16 pt-24 max-w-3xl">
+    <section className="mx-auto flex flex-col items-center gap-2 md:pb-8 py-16 md:pt-24 pt-16 max-w-3xl">
       <Badge className="my-2" variant="secondary">
         Website in development
       </Badge>
