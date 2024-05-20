@@ -18,7 +18,7 @@ export default function Header() {
     <header className="flex items-center py-4 px-4 md:container">
       <div className="w-full justify-start items-center">
         <Link href="/">
-          <h3 className="text-xl md:text-lg font-semibold tracking-tight">
+          <h3 className="text-lg font-semibold tracking-tight">
             Joeri Breedveld
           </h3>
         </Link>
@@ -73,7 +73,7 @@ export default function Header() {
 
         <SheetContent>
           <Link className="flex items-center gap-2" href="#">
-            <h3 className="text-xl md:text-lg font-semibold tracking-tight">
+            <h3 className="text-lg font-semibold tracking-tight">
               Joeri Breedveld
             </h3>
           </Link>
