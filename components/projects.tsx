@@ -46,7 +46,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section className="mx-auto py-8 md:py-12 md:pb-8 lg:py-16 lg:pb-20 md:grid-cols-2 grid lg:grid-cols-3 w-full gap-4">
+    <section className="mx-auto md:grid-cols-2 grid lg:grid-cols-3 w-full gap-4 md:pb-8 lg:pb-20">
       {projects.map((project, index) => (
         <Card key={index} className="w-full flex flex-col justify-between">
           <CardHeader>
@@ -66,40 +66,6 @@ export default function Projects() {
               height={128}
               className="rounded-lg w-full aspect-[3/2] object-cover"
             />
-            <ul className="flex gap-4">
-              <li>
-                <Link
-                  href={project.website}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Button
-                    disabled={project.visibility === "private"}
-                    variant="outline"
-                    className="mt-6"
-                  >
-                    <LinkIcon className="h-4 w-4 mr-2" />
-                    Website
-                  </Button>
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Button
-                    variant="outline"
-                    className="mt-6"
-                    disabled={project.visibility === "private"}
-                  >
-                    <Github className="h-4 w-4 mr-2" />
-                    GitHub
-                  </Button>
-                </Link>
-              </li>
-            </ul>
           </CardContent>
         </Card>
       ))}
