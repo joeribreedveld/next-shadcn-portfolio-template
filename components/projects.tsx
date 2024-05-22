@@ -50,7 +50,7 @@ export default function Projects() {
       {projects.map((project, index) => (
         <Card key={index} className="w-full flex flex-col justify-between">
           <CardHeader>
-            <CardTitle className="text-lg">{project.title}</CardTitle>
+            <CardTitle>{project.title}</CardTitle>
             <CardDescription>{project.description}</CardDescription>
             <div>
               <Badge variant="secondary" className="w-fit capitalize mt-2">

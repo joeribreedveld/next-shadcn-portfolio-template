@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="mx-auto flex flex-col items-center gap-2 md:pb-8 py-16 md:pt-24 pt-16 max-w-3xl">
+    <section className="mx-auto flex max-w-3xl flex-col items-center gap-2 py-8 md:py-12 md:pb-8 lg:py-24 lg:pb-20">
       <Badge className="my-2" variant="secondary">
         Website in development
       </Badge>
@@ -18,9 +18,9 @@ export default function Hero() {
         excellent user experience.
       </p>
       <div className="flex gap-4 py-4 md:pb-10 items-center">
-        <Link href="/">
-          <Button disabled>Learn more</Button>
-        </Link>
+        <Button asChild>
+          <Link href="/about">Learn more</Link>
+        </Button>
         <Link
           href="https://github.com/joeribreedveld"
           target="_blank"

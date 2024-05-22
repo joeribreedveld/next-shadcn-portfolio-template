@@ -15,9 +15,9 @@ import { cn } from "@/lib/utils";
 
 export default function Header() {
   return (
-    <header className="flex items-center py-4 px-4 md:container">
+    <header className="flex items-center py-4 px-4 md:container w-full">
       <div className="w-full justify-start items-center">
-        <Link href="/">
+        <Link href="/" className="flex items-center">
           <h3 className="text-lg font-semibold tracking-tight">
             Joeri Breedveld
           </h3>
@@ -36,23 +36,17 @@ export default function Header() {
           <NavigationMenuItem>
             <NavigationMenuLink
               asChild
-              className={cn(
-                navigationMenuTriggerStyle(),
-                "text-muted-foreground hover:text-muted-foreground",
-              )}
+              className={cn(navigationMenuTriggerStyle())}
             >
-              <Link href="/">About</Link>
+              <Link href="/about">About</Link>
             </NavigationMenuLink>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <NavigationMenuLink
               asChild
-              className={cn(
-                navigationMenuTriggerStyle(),
-                "text-muted-foreground hover:text-muted-foreground",
-              )}
+              className={cn(navigationMenuTriggerStyle())}
             >
-              <Link href="/">Experience</Link>
+              <Link href="/experience">Experience</Link>
             </NavigationMenuLink>
           </NavigationMenuItem>
         </NavigationMenuList>
