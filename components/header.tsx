@@ -52,7 +52,7 @@ export default function Header() {
         </NavigationMenuList>
       </NavigationMenu>
       <div className="w-full justify-end items-center hidden md:flex">
-        <Link href="/#footer">
+        <Link href="/contact">
           <Button>Contact</Button>
         </Link>
       </div>
@@ -66,23 +66,33 @@ export default function Header() {
         </SheetTrigger>
 
         <SheetContent>
-          <Link className="flex items-center gap-2" href="#">
-            <h3 className="text-lg font-semibold tracking-tight">
-              Joeri Breedveld
-            </h3>
-          </Link>
+          <SheetTrigger asChild>
+            <Link className="flex items-center gap-2" href="/">
+              <h3 className="text-lg font-semibold tracking-tight">
+                Joeri Breedveld
+              </h3>
+            </Link>
+          </SheetTrigger>
           <ul className="flex flex-col gap-3 mt-4">
             <li>
-              <Link href="#">Home</Link>
+              <SheetTrigger asChild>
+                <Link href="/">Project</Link>
+              </SheetTrigger>
             </li>
             <li>
-              <Link href="#">Project</Link>
+              <SheetTrigger asChild>
+                <Link href="/about">About</Link>
+              </SheetTrigger>
             </li>
             <li>
-              <Link href="#">About</Link>
+              <SheetTrigger asChild>
+                <Link href="/experience">Experience</Link>
+              </SheetTrigger>
             </li>
             <li>
-              <Link href="#">Experience</Link>
+              <SheetTrigger asChild>
+                <Link href="/contact">Contact</Link>
+              </SheetTrigger>
             </li>
           </ul>
         </SheetContent>
